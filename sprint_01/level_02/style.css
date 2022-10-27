@@ -1,0 +1,243 @@
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: sans-serif;
+            /* background-image: url("bg-guide/japan2.png");
+            opacity: 0.5; */
+}
+
+ul, li, menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+/* HEADER */
+
+nav {
+    padding-top: 56px;
+    background-image: url('images/header.jpg');
+    background-position: center;
+    height: 360px;
+}
+
+header > nav > ul {
+    display: flex;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    width: 80px;
+    margin: 0 16px;
+}
+
+nav > ul > li { flex-grow: 1; }
+nav > ul > li:nth-child(2) { flex-grow: 2; }
+
+menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+menu img {
+    max-height: 24px;
+    margin-right: 8px;
+}
+
+menu a {
+    margin: 0 8px;
+    padding: 16px 32px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+menu a:hover,
+.social-media li a:hover {
+    background-color: #EEEEEE;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+
+.social-media li a {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.social-media li a:first-child { margin-left: 16px; }
+
+.social-media li a img {
+    width: 24px;
+}
+
+header {
+    position: relative;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+}
+
+.title-background {
+    width: 90%;
+    height: 100%;
+    background-color: gray;
+    opacity: 0.5;
+    color: orange;
+    text-align: center;
+    font-family: serif;
+}
+
+
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+main > div {
+    flex-basis: 75%;
+    background-color: #DDDDDD;
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main li {
+    list-style: none;
+    background-color: #F5F1F1;
+    padding: 8px;
+    margin: 8px;
+}
+
+main aside {
+    flex-basis: 25%;
+    background-color: #DDDDDD;
+    padding: 16px;
+    margin-left: 8px;
+    text-align: center;
+}
+
+.image-container {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.article-date {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    color: yellow;
+}
+
+.article-category {
+    background-color: #F08080;
+    letter-spacing: 2px;
+    padding: 8px;
+    font-size: 24px;
+    color: white;
+    margin-top: 8px;
+}
+
+.article-body {
+    column-count: 2;
+    column-gap: 24px;
+    padding: 8px;
+    color: #333333;
+}
+
+.read-more {
+    color: #333333;
+    padding: 8px;
+}
+
+.main-footer-note {
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+/* FOOTER */
+
+footer {
+    padding: 0 8px;
+    background-color: #CCCCCC;
+    margin: 8px 0;
+}
+
+footer p {
+    background-color: #EEEEEE;
+    padding: 8px;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* TABLET */
+
+@media only screen and (max-width: 768px) {
+
+    nav { padding-top: 24px; height: 520px; }
+    header > nav > ul { flex-direction: column; }
+    menu { margin-top: 24px; }
+    .social-media { justify-content: center; }
+
+    main {
+        flex-direction: column;
+    }
+
+    main aside {
+        margin-left: 0px;
+        margin-top: 8px;
+    }
+    
+}
+
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 640px) {
+
+    menu { flex-direction: column; }
+    nav { height: 1000px; }
+    main ul { grid-template-columns: 1fr; }
+
+}
+
+
